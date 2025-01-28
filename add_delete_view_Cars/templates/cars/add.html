@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block contant %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card shadow-lg p-4 bg-body rounded">
+                <!-- رأس البطاقة مع تدرج أخضر -->
+                <div class="card-header bg-gradient-green text-white text-center py-3" style="background: linear-gradient(to right, #28a745, #218838);">
+                    <h2 class="mb-0"><i class="fas fa-car me-2"></i>إضافة سيارة جديدة</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post" class="form">
+                        {% csrf_token %}
+                        <!-- حقل العلامة التجارية -->
+                        <div class="mb-4">
+                            <label for="brand" class="form-label fw-bold">
+                                <i class="fas fa-tag me-2"></i>العلامة التجارية
+                            </label>
+                            <input type="text" name="brand" id="brand" class="form-control form-control-lg" placeholder="أدخل العلامة التجارية" required>
+                        </div>
+                        <!-- حقل السنة -->
+                        <div class="mb-4">
+                            <label for="year" class="form-label fw-bold">
+                                <i class="fas fa-calendar-alt me-2"></i>السنة
+                            </label>
+                            <input type="number" name="year" id="year" class="form-control form-control-lg" placeholder="أدخل السنة" required>
+                        </div>
+                        <!-- زر الإضافة مع تدرج أخضر -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-lg text-white" style="background: linear-gradient(to right, #28a745, #218838);">
+                                <i class="fas fa-plus-circle me-2"></i>إضافة
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock contant %}

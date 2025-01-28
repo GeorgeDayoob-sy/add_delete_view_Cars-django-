@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block contant %}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">List of Cars</h1>
+    <div class="row">
+        {% for car in cars %}
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">{{ car.brand }}</h5>
+                    <p class="card-text">Year: {{ car.year }}</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock contant %}
